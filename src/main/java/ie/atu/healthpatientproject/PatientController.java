@@ -37,13 +37,13 @@ public class PatientController {
     public ResponseEntity<?> getAllPatients() {
 
 
-        List<Patient> patient = patientService.getAllPatients();
+        List<Patient> patients = patientService.getAllPatients();
 
-        if (patient == null) {
+        if (patients == null) {
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.ok(patient);
+        return ResponseEntity.ok(patients);
     }
     @PostMapping("/createPatient")
     public ResponseEntity<String>create(@Valid @RequestBody Patient patient) {
