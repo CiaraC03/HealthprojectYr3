@@ -19,7 +19,7 @@ public class PatientService {
         patientRepository.save(patient);
     }
 
-    //retreive patients details by their id
+    //retrieve patients details by their id
     public Patient getPatientByPatientId(String patientId)
     {
         return patientRepository.findByPatientId(patientId);
