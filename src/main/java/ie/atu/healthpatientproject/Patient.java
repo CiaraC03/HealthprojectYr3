@@ -11,6 +11,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -19,7 +21,8 @@ import lombok.NoArgsConstructor;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long patientId;
+    private Long Id;
+
     @NotBlank
     private String name;
 
@@ -28,6 +31,9 @@ public class Patient {
 
     @NotBlank
     private String gender;
+
+    @NotBlank
+    private String patientId;
 
     @Min(18)
     private int age;
