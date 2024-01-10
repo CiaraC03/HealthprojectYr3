@@ -10,7 +10,7 @@ services:
       - my_network
 
   appointment-service:
-    image:
+    image: healthproject2_db:latest
     ports:
       - "8081:8081"
 
@@ -19,7 +19,7 @@ services:
 
 
   medicalRecords-service:
-    image:
+    image: healthproject3_db:latest
     ports:
       - "8082:8082"
 
@@ -28,7 +28,7 @@ services:
 
 
   pharmacy-service:
-    image:
+    image: healthproject4_db:latest
     ports:
       - "8083:8083"
 
